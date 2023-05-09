@@ -11,9 +11,9 @@ void led_task(){
 
     while(1){
         gpio_put(LED_PIN, 1);
-        vTaskDelay(100);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
         gpio_put(LED_PIN, 0);
-        vTaskDelay(100);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 }
 
